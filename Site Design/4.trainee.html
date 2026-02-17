@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="4.trainee.css">
+    <title>דף חניך</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.png" alt="לוגו">
+        </div>
+        <nav>
+            <ul class="tabs">
+                <li><a class="nav-button" href="0.login.html">רכז</a></li>
+                <li><a class="nav-button" href="0.login.html">מדריך</a></li>
+                <li><a class="nav-button" href="0.login.html">חניך</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main section -->
+    <main> 
+        <div class="trainee-container">
+            <!-- Upload Approvals Section -->
+            <section class="upload-section">
+                <h2>העלאת אישורים מההורים</h2>
+                <form id="approval-upload-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="parent-approval">בחר קובץ:</label>
+                        <input type="file" id="parent-approval" name="parent-approval" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                    </div>
+                    <button type="submit" class="submit-button">העלה אישור</button>
+                    <div id="approval-message" class="form-message"></div>
+                </form>
+            </section>
+
+            <!-- Upload Chores Section -->
+            <section class="upload-section">
+                <h2>העלאת מטלות מהמדריך</h2>
+                <form id="chores-upload-form" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="guide-chore">בחר קובץ מטלה:</label>
+                        <input type="file" id="guide-chore" name="guide-chore" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" required>
+                    </div>
+                    <button type="submit" class="submit-button">העלה מטלה</button>
+                    <div id="chore-message" class="form-message"></div>
+                </form>
+            </section>
+
+            <!-- Study Area Section -->
+            <section class="study-area-section">
+                <h2>איזור לימוד</h2>
+                <p>למד את הנושאים הנדרשים להצלחה שלך!</p>
+                <a href="study-area.html" class="study-link">כניסה לאיזור הלימוד</a>
+            </section>
+
+            <!-- Future Training Section -->
+            <section class="future-training-section">
+                <h2>בהמשך הדרך...</h2>
+                <ul class="future-list">
+                    <li>סדנה מקצועית ב-20-08-2024</li>
+                    <li>השתלמות ייחודית ב-22-08-2024</li>
+                    <li>טיול חוויתי ב-25-08-2024</li>
+                    <!-- Add more future activities as needed -->
+                </ul>
+            </section>
+        </div>
+
+        <!-- Grades and Accomplishments Section -->
+        <section class="grades-section">
+            <h2>ציונים והישגים</h2>
+            <div class="grades-container">
+                <div class="grade-item">
+                    <h3>תלמיד א'</h3>
+                    <p>ציון: 85%</p>
+                    <p>הישגים: סיום מוצלח של משימות</p>
+                </div>
+                <div class="grade-item">
+                    <h3>תלמיד א'</h3>
+                    <p>ציון: 78%</p>
+                    <p>הישגים: השתתפות פעילה בהשתלמויות</p>
+                </div>
+                <div class="grade-item">
+                    <h3>תלמיד א'</h3>
+                    <p>ציון: 92%</p>
+                    <p>הישגים: עבודה מצוינת בצוות</p>
+                </div>
+                <!-- Add more grade items as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="https://techlift.8200.org.il/aharai-tech">אתר הבית</a></li>
+            <li><a href="1.index.html">חזרה לעמוד הראשי</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

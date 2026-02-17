@@ -1,0 +1,80 @@
+/* Basic reset for body */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3efe8;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Login container styling */
+.login-container {
+    background-color: #6979ba;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Heading styling */
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Label styling */
+.form-group label {
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input field styling */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.login-button {
+    background-color: #f26326;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.login-button:hover {
+    background-color: #d15320;
+}
+
+/* Error message styling */
+.error-message {
+    color: #ff4d4d;
+    margin-top: 10px;
+    display: none;
+}

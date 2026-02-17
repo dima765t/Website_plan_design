@@ -1,0 +1,208 @@
+/* Main section styling */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f3efe8;
+}
+
+.guide-container {
+    display: flex;
+    flex-direction: row; /* Arrange sections side by side */
+    justify-content: space-between; /* Spread sections evenly */
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1600px; /* Accommodate four sections */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 30px; /* Space between sections */
+}
+
+.presence-section,
+.event-section,
+.grading-section,
+.task-section,
+.problematic-section {
+    background-color: #6979ba;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    max-width: 420px; /* Ensure sections are of equal size */
+    box-sizing: border-box;
+    flex: 1; /* Allow sections to grow equally */
+    direction: rtl;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+form {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+
+.submit-button {
+    background-color: #f26326;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #d15320;
+}
+
+.form-message {
+    margin-top: 10px;
+    color: #ff4d4d;
+    display: none; /* Hidden by default, will display messages dynamically */
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.form-group label {
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+    min-height: 80px;
+}
+
+/* Bar Chart Styling */
+.grading-section .chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px; /* Height of the chart area */
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.bar {
+    width: 50px;
+    background-color: #f26326;
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bar:hover {
+    background-color: #d15320;
+}
+
+.bar span {
+    position: absolute;
+    bottom: 0px; /* Position the label below the bar */
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.bar::after {
+    content: attr(data-grade); /* Display the grade as a tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.bar:hover::after {
+    opacity: 1;
+}
+
+/* Problematic Trainees Styling */
+.problematic-section {
+    background-color: #d9534f; /* Use a distinct color for alerts */
+    color: #fff;
+}
+
+.problematic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.problematic-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffcccc;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: right; /* Align text for readability */
+}
+
+@media (max-width: 768px) {
+    .guide-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presence-section,
+    .event-section,
+    .grading-section,
+    .task-section,
+    .problematic-section {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

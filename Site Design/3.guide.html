@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="3.guide.css">
+    <title>דף מדריך</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.png" alt="לוגו">
+        </div>
+        <nav>
+            <ul class="tabs">
+                <li><a class="nav-button" href="0.login.html">רכז</a></li>
+                <li><a class="nav-button" href="0.login.html">מדריך</a></li>
+                <li><a class="nav-button" href="0.login.html">חניך</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main section -->
+    <main> 
+        <div class="guide-container">
+
+            <!-- Presence Checking Section -->
+            <div class="presence-section">
+                <h2>נוכחות שבועית</h2>
+                <form id="presence-form">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>תלמיד</th>
+                                <th>נוכח</th>
+                                <th>לא נוכח</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>תלמיד א'</td>
+                                <td><input type="radio" name="presence1" value="present"></td>
+                                <td><input type="radio" name="presence1" value="absent"></td>
+                            </tr>
+                            <tr>
+                                <td>תלמיד ב'</td>
+                                <td><input type="radio" name="presence2" value="present"></td>
+                                <td><input type="radio" name="presence2" value="absent"></td>
+                            </tr>
+                            <tr>
+                                <td>תלמיד ג'</td>
+                                <td><input type="radio" name="presence3" value="present"></td>
+                                <td><input type="radio" name="presence3" value="absent"></td>
+                            </tr>
+                            <!-- Add more trainees as needed -->
+                        </tbody>
+                    </table>
+                    <button type="submit" class="submit-button">עדכן נוכחות</button>
+                </form>
+                <div id="presence-message" class="form-message"></div>
+            </div>
+
+            <!-- Event Logging Section -->
+            <div class="event-section">
+                <h2>דיווח אירועים</h2>
+                <form id="event-form">
+                    <div class="form-group">
+                        <label for="event-description">תיאור אירוע:</label>
+                        <textarea id="event-description" name="event-description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="trainee">בחר תלמיד:</label>
+                        <select id="trainee" name="trainee" required>
+                            <option value="">בחר תלמיד</option>
+                            <option value="trainee1">תלמיד א'</option>
+                            <option value="trainee2">תלמיד ב'</option>
+                            <option value="trainee3">תלמיד ג'</option>
+                            <!-- Add more trainees as needed -->
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">דווח אירוע</button>
+                    <div id="event-message" class="form-message"></div>
+                </form>
+            </div>
+
+            <!-- Grading Section as Bar Chart -->
+            <div class="grading-section">
+                <h2>הציונים של התלמידים</h2>
+                <div class="chart">
+                    <div class="bar" style="height: 85%;" data-grade="תלמיד א': 85%">
+                        <span>תלמיד א'</span>
+                    </div>
+                    <div class="bar" style="height: 70%;" data-grade="תלמיד ב': 70%">
+                        <span>תלמיד ב'</span>
+                    </div>
+                    <div class="bar" style="height: 55%;" data-grade="תלמיד ג': 55%">
+                        <span>תלמיד ג'</span>
+                    </div>
+                    <div class="bar" style="height: 90%;" data-grade="תלמיד ד': 90%">
+                        <span>תלמיד ד'</span>
+                    </div>
+                    <div class="bar" style="height: 65%;" data-grade="תלמיד ה': 65%">
+                        <span>תלמיד ה'</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problematic Trainees Section -->
+            <div class="problematic-section">
+                <h2>תלמידים עם בעיות</h2>
+                <ul class="problematic-list" id="problematic-list">
+                    <!-- Problematic trainees will be populated here -->
+                </ul>
+            </div>
+
+            <!-- Task Assignment Section -->
+            <div class="task-section">
+                <h2>גישה למשימות</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-description">תיאור משימה:</label>
+                        <textarea id="task-description" name="task-description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-type">סוג משימה:</label>
+                        <select id="task-type" name="task-type" required>
+                            <option value="group">לקבוצה כולה</option>
+                            <option value="individual">לתלמיד ספציפי</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="individual-trainee" style="display: none;">
+                        <label for="trainee-task">בחר תלמיד:</label>
+                        <select id="trainee-task" name="trainee-task">
+                            <option value="">בחר תלמיד</option>
+                            <option value="trainee1">תלמיד א'</option>
+                            <option value="trainee2">תלמיד ב'</option>
+                            <option value="trainee3">תלמיד ג'</option>
+                            <!-- Add more trainees as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="deadline">מועד אחרון:</label>
+                        <input type="date" id="deadline" name="deadline" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-file">גישה קובץ:</label>
+                        <input type="file" id="task-file" name="task-file" accept=".pdf,.doc,.docx,.zip,.rar">
+                    </div>
+                    <button type="submit" class="submit-button">העלה משימה</button>
+                    <div id="task-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <ul class="footer-links">
+            <li><a href="https://techlift.8200.org.il/aharai-tech">אתר הבית</a></li>
+            <li><a href="1.index.html">חזרה לעמוד הראשי</a></li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="3.guide.js"></script>
+</body>
+</html>
